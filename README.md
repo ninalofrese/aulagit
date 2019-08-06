@@ -24,3 +24,11 @@ Isso evita conflitos de versionamento, principalmente em casos de mais de uma pe
 8. Atualizar arquivos do repositório local para o web (Upload)
 
 ## Problemas vivenciados com o git
+
+### Mudar a url do remote
+
+Conferir qual a url do repositório
+``` git remote -v ```
+
+Modificar a url
+``` git remote set-url nova_url ```
