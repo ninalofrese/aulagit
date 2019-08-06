@@ -12,7 +12,7 @@
 ``` git here ```
 3. Criar um repositório no Github
 4. Indicar o repositório web no git local
-``` git remote add origin **endereco_do_repositorio**
+``` git remote add origin **endereco_do_repositorio** ```
 O local pode ser a url do navegador, ou do botão Clone/ Download (selecionar SSH se estiver em um PC configurado com as suas chaves)
 5. Adicionar os arquivos locais no repositório local
 ``` git add . ```
@@ -20,7 +20,7 @@ O local pode ser a url do navegador, ou do botão Clone/ Download (selecionar SS
 ``` git commit -m "Digite a mensagem" ```
 7. Atualizar arquivos do repositório web para o local (Download)
 ``` git pull ```
-Isso evita conflitos
+Isso evita conflitos de versionamento, principalmente em casos de mais de uma pessoa comitando o mesmo repositório
 8. Atualizar arquivos do repositório local para o web (Upload)
 
 ## Problemas vivenciados com o git
