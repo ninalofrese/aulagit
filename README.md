@@ -1,5 +1,27 @@
 # Aula de Git
 
+(http://rogerdudler.github.io/git-guide/index.pt_BR.html)
+
+**Git** - é um software de versionamento que permite que compartilhe o código
+**Git bash** - é um terminal onde você coloca os comandos
+**Github** - é um repositório web que compartilha o código. É um portfólio para recrutadores verem a complexidade e as linguagens que trabalha, além de ser uma "rede social" de desenvolvedores. Similares: gitlab e bit bucket.
+
+          NUVEM
+         /    \
+SUA MÁQUINA   OUTRA MÁQUINA
+
+## Glossário
+
+repositório = projeto
+branch = são timelines(linhas do tempo)
+commit = são pontos de alteração nos branchs
+git flow = é o fluxo de trabalho por branchs
+merge = união de dois branchs
+clone = cópia de uma branch de repositório online em repositório local
+fork = o fork é como um clone, mas dentro do github. Ele não baixa no computador, mas cria uma cópia na sua conta.
+pull = atualização do repositório local
+pull request = é um pedido que se faz ao dono do repositório para que este atualize o código dele com o seu código. Ou seja, você pede ao dono do projeto para adicionar as modificações ao repositório oficial.
+
 ## Comandos básicos de terminal e git
 ```
 git status                        //Mostra a situação do git neste repositório - executar sempre
