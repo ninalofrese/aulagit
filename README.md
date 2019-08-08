@@ -2,9 +2,9 @@
 
 (http://rogerdudler.github.io/git-guide/index.pt_BR.html)
 
-**Git** - é um software de versionamento que permite que compartilhe o código
+**Git** - é um software de versionamento que permite a sincronização do código com repositórios web
 **Git bash** - é um terminal onde você coloca os comandos
-**Github** - é um repositório web que compartilha o código. É um portfólio para recrutadores verem a complexidade e as linguagens que trabalha, além de ser uma "rede social" de desenvolvedores. Similares: gitlab e bit bucket.
+**Github** - é um repositório web que compartilha o código com controle de versão usando o Git. É um portfólio para recrutadores verem a complexidade e as linguagens que trabalha, além de ser uma "rede social" de desenvolvedores. Similares: gitlab e bit bucket.
 
           NUVEM
          /    \
@@ -102,3 +102,8 @@ git pull --allow-unrelated-histories
 
 ### Em caso de emergência em uma tela azul
 Ctrl+C:quit
+
+## O .gitignore
+É um arquivo que você cria que lista todos os arquivos e pastas que devem ser ignorados no push.
+Os commits após a criação deste arquivo serão ignorados.
+Ainda não sei exatamente como, mas ele é bastante utilizado para ignorar arquivos com dados sensíveis, como senhas.
