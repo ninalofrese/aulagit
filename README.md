@@ -2,7 +2,21 @@
 
 ## Comandos básicos de terminal e git
 ```
-**git remote** - Mostra a etiqueta do arquivo de origem
+git status                        //Mostra a situação do git neste repositório - executar sempre
+git remote                        //Mostra a etiqueta do arquivo de origem
+git remote -v                     //Mostra a url do repositório de origem
+
+pwd                               //Mostra caminho da pasta atual
+cd ..                             //Vai para pasta acima
+cd nome_da_pasta                  //entra na pasta citada
+ls                                //lista os arquivos da pasta
+ls -la                            //lista com detalhes de data, criação de arquivo...
+mkdir nome_da_pasta               //cria uma pasta
+touch nome_do_arquivo             //cria arquivo
+rm nome_arquivo.txt               //remove arquivo definitivamente(sem perguntar)
+rm -rf nome_da_pasta              //remove arquivo definitivamente(sem perguntar)
+mv nome_do_arquivo novo_caminho   //move o arquivo para o novo_caminho
+clear                             //esconde o histórico do console
 
 ```
 
@@ -33,9 +47,20 @@ git pull
 Isso evita conflitos de versionamento, principalmente em casos de mais de uma pessoa comitando o mesmo repositório
 8. Atualizar arquivos do repositório local para o web (Upload)
 
+## Como clonar um repositório
+
+```
+git clone endereco_do_repositorio
+cd nome_da_pasta_criada
+add .
+commit -m "nome do commit"
+pull
+push
+```
+
 ## Problemas vivenciados com o git
 
-### Mudar a url do remote
+### Mudar a url do remote (geralmente entre https e ssl)
 
 Conferir qual a url do repositório
 ```
@@ -45,4 +70,10 @@ git remote -v
 Modificar a url
 ```
 git remote set-url nova_url
+```
+
+### Quanto tem erro "refusing to merge unrelated histories"
+
+```
+git pull --allow-unrelated-histories
 ```
