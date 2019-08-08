@@ -77,3 +77,6 @@ git remote set-url nova_url
 ```
 git pull --allow-unrelated-histories
 ```
+
+### Em caso de emergência em uma tela azul
+Ctrl+C:quit
