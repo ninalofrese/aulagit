@@ -6,9 +6,11 @@
 **Git bash** - é um terminal onde você coloca os comandos
 **Github** - é um repositório web que compartilha o código com controle de versão usando o Git. É um portfólio para recrutadores verem a complexidade e as linguagens que trabalha, além de ser uma "rede social" de desenvolvedores. Similares: gitlab e bit bucket.
 
-          NUVEM
-         /    \
-SUA MÁQUINA   OUTRA MÁQUINA
+```
+SUA MÁQUINA <-> NUVEM <-> OUTRA MÁQUINA
+```
+
+![Como funciona o git](git.png)
 
 ## Glossário
 
