@@ -50,7 +50,7 @@ clear                             //esconde o histórico do console
 1. Criar uma pasta para o repositório e clicar com o botão direito e Git Bash Here
 2. Inicializar o git nesta pasta (só é realizado em pastas que não têm o git inicializado)
 ```
-git here
+git init
 ```
 3. Criar um repositório no Github
 4. Indicar o repositório web no git local
