@@ -14,18 +14,19 @@ SUA MÁQUINA <-> NUVEM <-> OUTRA MÁQUINA
 
 ## Glossário
 
-repositório = projeto
-branch = são timelines(linhas do tempo)
-commit = são pontos de alteração nos branchs
-git flow = é o fluxo de trabalho por branchs
-merge = união de dois branchs
-clone = cópia de uma branch de repositório online em repositório local
-fork = o fork é como um clone, mas dentro do github. Ele não baixa no computador, mas cria uma cópia na sua conta.
-pull = incorpora as mudanças de um repositório remoto para o branch local.
-fetch = atualiza as referências locais com relação às remotas, mas não faz merge com o branch local. Para incorporar, precisa executar um merge com o local.
-pull request = é um pedido que se faz ao dono do repositório para que este atualize o código dele com o seu código. Ou seja, você pede ao dono do projeto para adicionar as modificações ao repositório oficial.
+- **repositório** = projeto
+- **branch** = é uma timeline (linha do tempo)
+- **commit** = são pontos de alteração nos branchs
+- **git flow** = é o fluxo de trabalho por branchs
+- **merge** = união de dois branchs
+- **clone** = cópia de uma branch de repositório online em repositório local
+- **fork** = o fork é como um clone, mas dentro do github. Ele não baixa no computador, mas cria uma cópia na sua conta.
+- **pull** = incorpora as mudanças de um repositório remoto para o branch local.
+- **fetch** = atualiza as referências locais com relação às remotas, mas não faz merge com o branch local. Para incorporar, precisa executar um merge `git merge FETCH_HEAD` com o local.
+- **pull request** = é um pedido que se faz ao dono do repositório para que este atualize o código dele com o seu código. Ou seja, você pede ao dono do projeto para adicionar as modificações ao repositório oficial.
 
 ## Comandos básicos de terminal e git
+
 ```
 git status                        //Mostra a situação do git neste repositório - EXECUTAR SEMPRE
 git remote                        //Mostra a etiqueta do arquivo de origem
