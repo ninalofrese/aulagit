@@ -1,6 +1,6 @@
 # Aula de Git
 
-(http://rogerdudler.github.io/git-guide/index.pt_BR.html)
+http://rogerdudler.github.io/git-guide/index.pt_BR.html
 
 **Git** - é um software de versionamento que permite a sincronização do código com repositórios web\
 **Git bash** - é um terminal onde você coloca os comandos\
@@ -125,3 +125,12 @@ Ctrl+C :quit
 É um arquivo que você cria que lista todos os arquivos e pastas que devem ser ignorados no push.
 Os commits após a criação deste arquivo serão ignorados.
 Ainda não sei exatamente como, mas ele é bastante utilizado para ignorar arquivos com dados sensíveis, como senhas.
+
+## Criar chave SSH em Linux
+
+https://medium.com/@rgdev/como-adicionar-uma-chave-ssh-na-sua-conta-do-github-linux-e0f19bbc4265
+
+```
+ssh -T git@github.com
+# Attempts to ssh to GitHub
+```
