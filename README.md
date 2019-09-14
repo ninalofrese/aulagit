@@ -44,7 +44,8 @@ rm -rf nome_da_pasta              //remove arquivo definitivamente(sem perguntar
 mv nome_do_arquivo novo_caminho   //move o arquivo para o novo_caminho
 clear                             //esconde o histórico do console
 
-git checkout -b branch            //sai da branch atual e cria uma nova com o nome "branch"
+git checkout -b branch            //sai da branch atual e cria uma nova com o nome "branch"git ch
+git checkout branch               //sair da branch atual e vai para a branch com o nome "branch"
 ```
 
 ## Como iniciar um repositório do computador
