@@ -77,7 +77,7 @@ Isso evita conflitos de versionamento, principalmente em casos de mais de uma pe
 
 ```
 git push -u origin master
-//não só faz o push como também seta que o seu branch padrão é o master, permitindo usar git push no futuro.
+//não só faz o push como também seta que o seu branch padrão é o master, permitindo usar só git push/ git pull sem ficar definindo origin master no futuro.
 ```
 
 ## Como clonar um repositório
@@ -136,3 +136,21 @@ https://medium.com/@rgdev/como-adicionar-uma-chave-ssh-na-sua-conta-do-github-li
 ssh -T git@github.com
 # Attempts to ssh to GitHub
 ```
+
+## Chegou no projeto, como criar um branch só seu
+
+1. Acabou de chegar no projeto, vai na pasta onde você vai colocar carinhosamente o nosso projeto, clica no botão direito e dá um **Git Bash Here**. Essa pasta onde você clica com o botão direito não pode ter uma pasta .git.
+
+2. Clona o nosso projeto com o comando `git clone https://github.com/eduaupin/apicomidadh.git`. Foi criada uma pasta para o nosso projeto, entre nela com o comando `cd apicomidadh`.
+
+3. Cria um canto todo seu com o comando `git checkout -b seunome`. Isso vai mudar automaticamente para o seu branch, e caso futuramente você volte para ele, use o comando `git checkout seunome`.
+
+4. Antes de codar, é bom verificar se os arquivos estão atualizados com o development. Faça sempre `git pull origin development`.
+
+Quando estiver pronto para enviar os seus arquivos, **confira se você está no seu branch (pelo nome azul na frente do caminho no Bash)**, e então você vai precisar fazer os passos `git add .` e `git commit -m "Sua mensagem"`
+
+5. Quando terminar (ou quiser salvar o progresso), faça `git push origin seunome`.
+
+Note que tanto no item 4 como aqui, não indico o uso do `-u`, porque não queremos colocar um branch como padrão e acabar upando no branch errado.
+
+6. Ao final do sprint, peça o pull request para a branch development pelo github.
