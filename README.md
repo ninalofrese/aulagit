@@ -120,6 +120,10 @@ Isso acontece quando não há branch setado para ser usado sem argumentos, cru n
 git push -u origin master
 ```
 
+### Proteger a master de commits
+
+https://help.github.com/en/articles/configuring-protected-branches
+
 ### Em caso de emergência em uma tela azul
 Ctrl+C :quit
 
