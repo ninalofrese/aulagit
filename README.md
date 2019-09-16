@@ -124,6 +124,10 @@ git push -u origin master
 
 https://help.github.com/en/articles/configuring-protected-branches
 
+### Limpar a master (depois de merge com development ou backup)
+
+https://blog.tomasfejfar.cz/git-how-to-make-master-empty/
+
 ### Em caso de emergência em uma tela azul
 Ctrl+C :quit
 
