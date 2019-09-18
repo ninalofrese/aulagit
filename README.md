@@ -153,7 +153,7 @@ ssh -T git@github.com
 
 3. Cria um canto todo seu com o comando `git checkout -b seunome`. Isso vai mudar automaticamente para o seu branch, e caso futuramente você volte para ele, use o comando `git checkout seunome`.
 
-4. Antes de codar, é bom verificar se os arquivos estão atualizados com o development. Faça sempre `git pull origin development`.
+4. Antes de codar, é bom verificar se os arquivos estão atualizados com o development. Faça sempre `git pull origin development`. Caso queira atualizar os seus arquivos de acordo com o nome de um colega, use `git pull origin nomedabranchdocolega`.
 
 Quando estiver pronto para enviar os seus arquivos, **confira se você está no seu branch (pelo nome azul na frente do caminho no Bash)**, e então você vai precisar fazer os passos `git add .` e `git commit -m "Sua mensagem"`
 
