@@ -73,8 +73,11 @@ git add -p
 //salva modificações em um stash
 git stash
 
-//recupera as modificações
+//recupera o stash na branch atual
 git stash pop
+
+//lista os arquivos do stash
+git stash list
 ```
 
 [Mover mudanças feitas em um branch para outro (que não foram adicionadas nem commitadas)](https://education.launchcode.org/web-fundamentals/tutorials/git-stash/)
