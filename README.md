@@ -24,6 +24,11 @@ SUA MÁQUINA <-> NUVEM <-> OUTRA MÁQUINA
 - **pull** = incorpora as mudanças de um repositório remoto para o branch local.
 - **fetch** = atualiza as referências locais com relação às remotas, mas não faz merge com o branch local. Para incorporar, precisa executar um merge `git merge FETCH_HEAD` com o local.
 - **pull request** = é um pedido que se faz ao dono do repositório para que este atualize o código dele com o seu código. Ou seja, você pede ao dono do projeto para adicionar as modificações ao repositório oficial.
+- **untracked/unstage** = estado inicial de arquivos que precisam ser adicionados ao Stage (área de preparação)
+- **tracked/staged** = os arquivos selecionados em `git add` são preparados para serem enviados
+- **head** = É uma referência para um objeto commit.
+
+![Fluxo de commit](fluxo-de-commit.png)
 
 ## Comandos básicos de terminal e git
 
@@ -46,33 +51,71 @@ clear                             //esconde o histórico do console
 
 git checkout -b branch            //sai da branch atual e cria uma nova com o nome "branch"git ch
 git checkout branch               //sair da branch atual e vai para a branch com o nome "branch"
+git log                           //Traz os commits daquela branch
 ```
+
+### Alguns comandos intermediários
+
+#### Git add -p
+
+Passa por todas as alterações e dizer qual deve ser adicionada e qual não deve. O `-p` é de patch.
+
+Usado quando você fez alterações em contextos diferentes e precisa de mais de um commit, ou commit seperados de alterações de um mesmo arquivo.
+```
+git add -p
+```
+
+#### Git stash
+
+É uma pilha de modificações inacabadas que pode ser retornada mais tarde. Só deve ser utilizado em arquivos que não foram staged (preparados/ add) nem consolidados (commitados).
+
+```
+//salva modificações em um stash
+git stash
+
+//recupera as modificações
+git stash pop
+```
+
+[Mover mudanças feitas em um branch para outro (que não foram adicionadas nem commitadas)](https://education.launchcode.org/web-fundamentals/tutorials/git-stash/)
+
+[Documentação do Stash](https://git-scm.com/book/pt-br/v1/Ferramentas-do-Git-Fazendo-Stash)
+
+#### Merge/ Rebase
+
+https://www.concrete.com.br/2017/09/04/git-para-corajosos-rebase-parte-1/
 
 ## Como iniciar um repositório do computador
 1. Criar uma pasta para o repositório e clicar com o botão direito e Git Bash Here
+
 2. Inicializar o git nesta pasta (só é realizado em pastas que não têm o git inicializado)
 ```
 git init
 ```
 3. Criar um repositório no Github
+
 4. Indicar o repositório web no git local
 ```
 git remote add origin endereco_do_repositorio
 ```
 O local pode ser a url do navegador, ou do botão Clone/ Download (selecionar SSH se estiver em um PC configurado com as suas chaves)
+
 5. Adicionar os arquivos locais no repositório local
 ```
 git add .
 ```
+
 6. Etiquetar os arquivos com um comentário sobre os arquivos
 ```
 git commit -m "Digite a mensagem"
 ```
+
 7. Atualizar arquivos do repositório web para o local (Download)
 ```
 git pull
 ```
 Isso evita conflitos de versionamento, principalmente em casos de mais de uma pessoa comitando o mesmo repositório
+
 8. Atualizar arquivos do repositório local para o web (Upload)
 
 ```
@@ -111,9 +154,9 @@ git remote set-url nova_url
 git pull --allow-unrelated-histories
 ```
 
-### Erro "The current branch master has no upstream branch"
+### Erro "The current branch master has no upstream branch" ao dar git pull/git push
 
-Isso acontece quando não há branch setado para ser usado sem argumentos, cru no git pull ou git push. Por isso, é importante ter o -u setado quando fizer o primeiro pull/ push. 
+Isso acontece quando não há branch setado para ser usado sem argumentos, cru no git pull ou git push. Por isso, é importante ter o -u setado quando fizer o primeiro pull/ push.
 
 ```
 //git push nome_da_origem nome_do_branch
@@ -133,12 +176,19 @@ Ctrl+C :quit
 
 ### Caso o commit tenha sido feito no branch errado
 
-Type `git log` and remember the SHA of the commit you want to move.
-Check out the branch you want to move the commit to.
-Type `git cherry-pick SHA` substituting the SHA from above.
-Switch back to your original branch.
-Use `git reset HEAD~1` to reset back before your wrong-branch commit.
-cherry-pick takes a given commit and applies it to the currently checked-out head, thus allowing you to copy the commit over to a new branch.
+1. Insira o comando `git log` e guarde o SHA do commit que você quer mover
+
+2. Faça `git checkout` para o branch de destino do commit que você quer mover
+
+3. Digite `git cherry-pick SHA`, substituindo o SHA pelo guardado acima. (Vai abrir uma tela com as modificações do commit para escolher para mover, selecione tudo)
+
+4. Volte para o branch de origem
+
+5. Use `git reset HEAD~1` para resetar para antes do commit errado
+
+Cherry-picking é um comando do git que permite ao usuário escolher os commits que deseja mandar à uma branch. Assim, ele pode analisar os commits em outra branch do repositório e escolher aquelas que são úteis para ir para sua branch.
+
+É um comando útil, pois permite a adição de apenas commits importantes, evitando commits que estão sem testes ou que contém erros. Além disso, esse comando auxilia no desenvolvimento de softwares colaborativos, visto que vários usuários mandam alterações no código a todo momento. Usando o cherry-picking, é possível escolher os commits relevantes e de qualidades dos colaboradores, para depois levá-los às branchs principais, como a master.
 
 ## O .gitignore
 É um arquivo que você cria que lista todos os arquivos e pastas que devem ser ignorados no push.
