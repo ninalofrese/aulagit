@@ -131,6 +131,15 @@ https://blog.tomasfejfar.cz/git-how-to-make-master-empty/
 ### Em caso de emergência em uma tela azul
 Ctrl+C :quit
 
+### Caso o commit tenha sido feito no branch errado
+
+Type `git log` and remember the SHA of the commit you want to move.
+Check out the branch you want to move the commit to.
+Type `git cherry-pick SHA` substituting the SHA from above.
+Switch back to your original branch.
+Use `git reset HEAD~1` to reset back before your wrong-branch commit.
+cherry-pick takes a given commit and applies it to the currently checked-out head, thus allowing you to copy the commit over to a new branch.
+
 ## O .gitignore
 É um arquivo que você cria que lista todos os arquivos e pastas que devem ser ignorados no push.
 Os commits após a criação deste arquivo serão ignorados.
