@@ -58,9 +58,9 @@ git log                           //Traz os commits daquela branch
 
 #### Git add -p
 
-Passa por todas as alterações e dizer qual deve ser adicionada e qual não deve. O `-p` é de patch.
+Passa por todas as alterações e você poderá dizer qual deve ser adicionada e qual não deve. O `-p` é de patch.
 
-Usado quando você fez alterações em contextos diferentes e precisa de mais de um commit, ou commit seperados de alterações de um mesmo arquivo.
+Usado quando você fez alterações em contextos diferentes e precisa de mais de um commit, ou commit separados de alterações de um mesmo arquivo.
 ```
 git add -p
 ```
