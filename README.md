@@ -241,3 +241,7 @@ Quando estiver pronto para enviar os seus arquivos, **confira se você está no 
 Note que tanto no item 4 como aqui, não indico o uso do `-u`, porque não queremos colocar um branch como padrão e acabar upando no branch errado.
 
 6. Ao final do sprint, peça o pull request para a branch development pelo github.
+
+***
+
+(https://git-scm.com/book/pt-br/v2)
