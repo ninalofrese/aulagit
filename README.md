@@ -103,7 +103,8 @@ git stash list
 
 #### Merge/ Rebase
 
-https://www.concrete.com.br/2017/09/04/git-para-corajosos-rebase-parte-1/
+~~https://www.concrete.com.br/2017/09/04/git-para-corajosos-rebase-parte-1/~~
+[Git merge e git rebase - quando usá-los](https://www.treinaweb.com.br/blog/git-merge-e-git-rebase-quando-usa-los/)
 
 ## Como iniciar um repositório do computador
 1. Criar uma pasta para o repositório e clicar com o botão direito e Git Bash Here
