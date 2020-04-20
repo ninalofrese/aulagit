@@ -1,6 +1,6 @@
 # Aula de Git
 
-http://rogerdudler.github.io/git-guide/index.pt_BR.html
+[Guia simples](http://rogerdudler.github.io/git-guide/index.pt_BR.html)
 
 **Git** - é um software de versionamento que permite a sincronização do código com repositórios web\
 **Git bash** - é um terminal onde você coloca os comandos\
@@ -14,19 +14,19 @@ SUA MÁQUINA <-> NUVEM <-> OUTRA MÁQUINA
 
 ## Glossário
 
-- **repositório** = projeto
-- **branch** = é uma timeline (linha do tempo)
-- **commit** = são pontos de alteração nos branchs
-- **git flow** = é o fluxo de trabalho por branchs
-- **merge** = união de dois branchs
-- **clone** = cópia de uma branch de repositório online em repositório local
-- **fork** = o fork é como um clone, mas dentro do github. Ele não baixa no computador, mas cria uma cópia na sua conta.
-- **pull** = incorpora as mudanças de um repositório remoto para o branch local.
-- **fetch** = atualiza as referências locais com relação às remotas, mas não faz merge com o branch local. Para incorporar, precisa executar um merge `git merge FETCH_HEAD` com o local.
-- **pull request** = é um pedido que se faz ao dono do repositório para que este atualize o código dele com o seu código. Ou seja, você pede ao dono do projeto para adicionar as modificações ao repositório oficial.
-- **untracked/unstage** = estado inicial de arquivos que precisam ser adicionados ao Stage (área de preparação)
-- **tracked/staged** = os arquivos selecionados em `git add` são preparados para serem enviados
-- **head** = É uma referência para um objeto commit.
+- **repositório**: projeto
+- **branch**: é uma timeline (linha do tempo)
+- **commit**: são pontos de alteração nos branchs
+- **git flow**: é o fluxo de trabalho por branchs
+- **merge**: união de dois branchs
+- **clone**: cópia de uma branch de repositório online em repositório local
+- **fork**: o fork é como um clone, mas dentro do github. Ele não baixa no computador, mas cria uma cópia na sua conta.
+- **pull**: incorpora as mudanças de um repositório remoto para o branch local. [Tem os mesmos efeitos de git fetch + git merge](https://metring.com.br/para-que-serve-o-git-fetch-vs-pull).
+- **fetch**: atualiza as referências locais com relação às remotas, mas não faz merge com o branch local, [ao contrário do git pull](https://metring.com.br/para-que-serve-o-git-fetch-vs-pull). Para incorporar, precisa executar um merge `git merge FETCH_HEAD` com o local.
+- **pull request**: é um pedido que se faz ao dono do repositório para que este atualize o código dele com o seu código. Ou seja, você pede ao dono do projeto para adicionar as modificações ao repositório oficial.
+- **untracked/unstage**: estado inicial de arquivos que precisam ser adicionados ao Stage (área de preparação)
+- **tracked/staged**: os arquivos selecionados em `git add` são preparados para serem enviados
+- **head**: É uma referência para um objeto commit.
 
 ![Fluxo de commit](fluxo-de-commit.png)
 
@@ -108,6 +108,7 @@ git stash list
 [Git merge e git rebase - quando usá-los](https://www.treinaweb.com.br/blog/git-merge-e-git-rebase-quando-usa-los/)
 
 ## Como iniciar um repositório do computador
+
 1. Criar uma pasta para o repositório e clicar com o botão direito e Git Bash Here
 
 2. Inicializar o git nesta pasta (só é realizado em pastas que não têm o git inicializado)
