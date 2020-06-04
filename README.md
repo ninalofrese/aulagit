@@ -90,11 +90,20 @@ e - manually edit the current hunk
 //salva modificações em um stash
 git stash
 
-//recupera o stash na branch atual
-git stash pop
+//salva modificações em um stash com um nome
+git stash save "my_stash"
 
-//lista os arquivos do stash
+//lista os arquivos do stash - {n} é o número na lista
 git stash list
+//stash@{0}: On master: my_stash or hash
+
+//recupera o stash na branch atual e remove da lista
+git stash pop
+git stash pop stash@{n}
+
+//recupera o stash na branch atual e mantém na lista 
+git stash apply stash@{n}
+
 ```
 
 [Mover mudanças feitas em um branch para outro (que não foram adicionadas nem commitadas)](https://education.launchcode.org/web-fundamentals/tutorials/git-stash/)
